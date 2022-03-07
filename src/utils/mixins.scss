@@ -1,0 +1,17 @@
+@mixin borderRadiusSmall {
+  border-radius: 3px;
+}
+
+@mixin boxShadowLight {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+@mixin buttonHover {
+  transform: translateY(-2px) translateX(2px);
+  @include boxShadowLight;
+}
+
+@mixin buttonActive {
+  transform: translateY(0) translateX(0);
+  box-shadow: none;
+}

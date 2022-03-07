@@ -1,0 +1,25 @@
+@import "../utils/colors.scss";
+@import "../utils/mixins.scss";
+
+.list_container {
+  margin-top: 10rem;
+  & > ul {
+    list-style: none;
+    text-align: center;
+    color: $orangeDark;
+    & > li {
+      margin: 0 auto;
+      font-size: 1.6rem;
+      padding: 1rem;
+
+      @include borderRadiusSmall;
+      @include boxShadowLight;
+
+      background-color: $yellow;
+    }
+
+    & > li:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}

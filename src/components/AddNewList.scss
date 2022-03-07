@@ -1,0 +1,83 @@
+@import "../utils/colors.scss";
+@import "../utils/mixins.scss";
+
+// button reset
+.btnR {
+  display: inline-block;
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
+.addNewList {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: $yellow;
+  border: 1px solid $blue;
+
+  @include boxShadowLight;
+
+  & > legend {
+    font-size: 1.4rem;
+    color: $blue;
+  }
+
+  &_inputField {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 3rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+
+    color: $blue;
+  }
+
+  &_btnClose {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+
+    display: flex;
+    align-items: center;
+
+    padding: 1rem 1rem;
+    border-radius: 50px;
+
+    border: 1px solid $blue;
+  }
+
+  &_btn-submit {
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 3rem;
+
+    padding: 1rem 2rem;
+
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: $orangeDark;
+
+    border: 1px solid $blue;
+    @include borderRadiusSmall;
+
+    transition: all 0.2s;
+
+    &:hover {
+      @include buttonHover;
+    }
+
+    &:active {
+      @include buttonActive;
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
